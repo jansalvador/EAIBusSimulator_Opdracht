@@ -52,9 +52,34 @@ public class Runner {
 	}
 
 	public static int initBussen(){
-		Bus bus1=new Bus(Lijnen.LIJN1, Bedrijven.ARRIVA, 1);
-
-		addBus(3, bus1);
+        bussenLijst = [
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, 1)
+        ]
+        for bus in bussenLijst{
+            addbus(bus[0], bus[1], bus[2], bus[3])
+        }
+        bussenLijst = [
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+            (3, Lijnen.LIJN1, Bedrijven.ARRIVA, -1)
+        ]
+        for bus in bussenLijst{
+            addbus(bus[0], bus[1], bus[2], bus[3])
+        }
 
 		return Collections.min(busStart.keySet());
 	}
